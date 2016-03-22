@@ -1,0 +1,18 @@
+{
+  "name": "Video Element Extractor",
+  "version": "1.0",
+  "description": "Getting video element on a page",
+  "permissions": [
+    "activeTab"
+  ],
+  "browser_action": {
+      "default_title": "Video Element Extractor",
+      "default_popup": "popup.html"
+  },
+  "content_scripts": [{
+    "matches": ["*://*/*"],
+    "js": ["jquery.min.js","content.js"]
+  }],
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self'; object-src 'self'"
+}
