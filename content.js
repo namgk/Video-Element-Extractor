@@ -6,5 +6,6 @@ chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
 		video: $('video').prop('outerHTML'),
 		videosrc: $('video').attr('src')
 	};
+	console.log(response)
   sendResponse(response);
 });	

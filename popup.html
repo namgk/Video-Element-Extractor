@@ -2,11 +2,37 @@
 <html>
 <head>
   <script src="jquery.min.js"></script>
-  <script src="popup.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js"></script>
+  <script src="helloVideos.js"></script>
+  <script src="main.js"></script>
+  
+  <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body style="width: 400px">
   <b>video element: </b><div id="video"></div><br/>
   <b>video src: </b><div id="videosrc"></div>
+
+	<div id='cast'>
+		<div id='controls'>
+      <button id='loadApp'>Launch cast</button>
+      <button id='loadMedia'>Load video</button>
+		  <button id="playpauseresume">Play</button>
+		  <button id="joinsessionbyid">Resume session</button>
+
+		</div>
+
+	  <div id='status'>
+	    <div style="margin:10px;">
+	      Progress : <input id="progress" type="range" min="1" max="100" value="1" step="1" onmouseup="seekMedia(this.value);">
+	      <span id="duration"></span>
+	      <div id="progress_tick"></div>
+	    </div>
+	    <div style="margin:10px;">
+	      State : <span id="playerstate">IDLE</span>
+	    </div>
+	  </div>
+	</div>
+ 
 </body>
 </html>
 
