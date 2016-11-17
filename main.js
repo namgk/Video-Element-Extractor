@@ -22,6 +22,10 @@ chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
 
     $('#cast').show();
 
+    $('#progress').change(function(){
+      var pos = $(this).val();
+      seekMedia(pos);
+    })
 
       // check if a session ID is saved into localStorage
 		storedSession = JSON.parse(localStorage.getItem('storedSession'));
